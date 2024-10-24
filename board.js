@@ -1,3 +1,6 @@
+// Exporting Modules
+// Importing Modules
+
 const board = [
 	[
 		{ type: "large", id: 1, hit: false }, // Represents position A0
@@ -15,3 +18,5 @@ const board = [
 		{ type: "empty", hit: false }, // Represents position C2
 	],
 ];
+
+module.exports = board;

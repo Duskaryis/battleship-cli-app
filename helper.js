@@ -1,3 +1,5 @@
+const board = require("./board");
+
 const readlineSync = require("readline-sync");
 
 function greetUser() {
@@ -6,3 +8,4 @@ function greetUser() {
 }
 
 greetUser();
+console.table(board);
