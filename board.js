@@ -1,3 +1,5 @@
+const readlineSync = require("readline-sync");
+
 function printBoard(board, debug) {
 	const displayBoard = {};
 

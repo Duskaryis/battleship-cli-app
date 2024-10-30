@@ -1,5 +1,6 @@
 const readlineSync = require("readline-sync");
 const { printBoard, setUpBoard } = require("./board");
+const {} = require("./shipPlacement");
 
 function greetUser() {
 	console.log("🚢  Welcome to BattleShip! 🚢");
@@ -9,5 +10,7 @@ function greetUser() {
 		console.log("Okay! Maybe another time then!");
 	}
 }
+
+function startGame() {}
 
 greetUser();
