@@ -23,17 +23,6 @@ function printBoard(board, debug) {
 	console.table(displayBoard);
 }
 
-function setUpBoard() {
-	const boardSizeOptions = ["4X4", "5X5", "6X6"];
-	const boardChoice = readlineSync.keyInSelect(
-		boardSizeOptions,
-		"Choose a board size: "
-	);
-	const boardSize = boardSizeOptions[boardChoice].split("x").map(Number);
-	const board = initializeBoard(boardSize[0], boardSize[1]);
-	startGame(printBoard);
-}
-
 function initializeBoard(rows, cols) {
 	const board = [];
 	for (let row = 0; row < rows; row++) {
@@ -46,4 +35,4 @@ function initializeBoard(rows, cols) {
 	return board;
 }
 
-module.exports = { printBoard, setUpBoard };
+module.exports = { printBoard, initializeBoard };
