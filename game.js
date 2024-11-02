@@ -1,22 +1,25 @@
 const readlineSync = require("readline-sync");
-const { printBoard, initializeBoard } = require("./board");
+const { printBoard } = require("./board");
 const { computerPlacement, playerPlacement } = require("./shipPlacement");
 
 function greetUser() {
     console.log("🚢 Welcome to BattleShip! 🚢");
     if( readlineSync.keyInYN("Would you want to play?")) {
-        setUpBoard();
+        pickBoardSize();
     }
     else {
         console.log("Okay! Maybe another time then!")
     }
 }
 
-function setUpBoard() {
+function pickBoardSize() {
     const boardSizeOptions = ["4X4", "5X5", "6X6"];
     const boardChoice = readlineSync.keyInSelect(boardSizeOptions, "Choose a board size: ");
     const boardSize = boardSizeOptions[boardChoice].split("x").map(Number);
-    startGame(boardSize);
+}
+
+function initializeBoard(board, boardSize) {
+
 }
 
 function startGame() {
@@ -47,6 +50,6 @@ function playerTurn() {
 }
 
 greetUser();
-setUpBoard();
+pickBoardSize();
 startGame();
 playerTurn();

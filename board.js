@@ -26,7 +26,7 @@ function printBoard(board, debug) {
 							}
 							
 							
-function initializeBoard(rows, cols) {
+/* function initializeBoard(rows, cols) {
 	const board = [];
 	for (let row = 0; row < rows; row++) {
 		const boardRow = [];
@@ -36,6 +36,6 @@ function initializeBoard(rows, cols) {
 		board.push(boardRow);
 	}
 	return board;
-} 
+} */
 
-module.exports = { printBoard, initializeBoard };
+module.exports = { printBoard };
